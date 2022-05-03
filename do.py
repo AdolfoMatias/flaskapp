@@ -26,6 +26,9 @@ if __name__=="__main__":
     port = int(os.getenv("PORT", '5000'))
 
     app.run(host="0.0.0.0", port=port)
+    #colocar no .flaskenv
+    #FLASK_ENV=development(modo de produção)
+
 
 
 
