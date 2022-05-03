@@ -3,10 +3,10 @@ import os
 
 from flask import render_template
 
-
+@app.route("/")
 @app.route("/index")
 def novo():
-    nome= "Alba"
+    
     dados = {"profissao": "Professora"}
     return render_template("index.html", dados=dados)
 
