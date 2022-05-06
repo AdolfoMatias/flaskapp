@@ -1,7 +1,11 @@
-from app import app
+from flask import render_template, request,Flask
+
 import os
 
-from flask import render_template, request,redirect,flash
+app = Flask(__name__)
+
+
+
 
 @app.route("/")
 @app.route("/index/")
@@ -45,6 +49,7 @@ def autenticar():
 
 if __name__=="__main__":
     port = int(os.getenv("PORT", '5000'))
+    
 
     app.run(host="0.0.0.0", port=port)
     #colocar no .flaskenv
